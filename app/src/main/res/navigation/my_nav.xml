@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.zainul.buildrrr.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/regiterFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.zainul.buildrrr.onboarding.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_homeFragment"
+            app:destination="@id/regiterFragment"
+            app:popUpTo="@id/viewPagerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_loginactivity"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/viewPagerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/regiterFragment"
+        android:name="com.zainul.buildrrr.RegisterMitra"
+        android:label="fragment_home"
+        tools:layout="@layout/activity_register_mitra" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.zainul.buildrrr.LoginMitra"
+        android:label="fragment_home"
+        tools:layout="@layout/activity_login_mitra" />
+    <action
+        android:id="@+id/action_masuk_to_loginmitra"
+        app:destination="@id/loginmitra"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/VeifyPhone"
+        android:name="com.zainul.buildrrr.VerifyPhone"
+        android:label="fragment_home"
+        tools:layout="@layout/activity_verify_phone" />
+    <action
+        android:id="@+id/action_masuk_to_Verifyphone"
+        app:destination="@id/VeifyPhone"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_masuk_to_loginaclient"
+        app:destination="@id/LoginClient1"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/loginmitra"
+        android:name="com.zainul.buildrrr.LoginMitra"
+        android:label="loginactivity"
+        tools:layout="@layout/activity_login_mitra" />
+
+    <action
+        android:id="@+id/action_masuk_to_logindeveloper"
+        app:destination="@id/LoginDeveloper"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/LoginDeveloper"
+        android:name="com.zainul.buildrrr.LoginDeveloper"
+        android:label="LoginDeveloper"
+        tools:layout="@layout/activity_login_developer" />
+
+
+    <action
+        android:id="@+id/action_Daftar_to_Daftaractivity"
+        app:destination="@id/regiterFragment"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+ <fragment
+        android:id="@+id/LoginClient1"
+        android:name="com.zainul.buildrrr.LoginClient"
+        android:label="loginclient"
+        tools:layout="@layout/activity_login_client" />
+    <action
+        android:id="@+id/action_masuk_to_loginclient"
+        app:destination="@id/LoginClient1"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/Registerclient"
+        android:name="com.zainul.buildrrr.RegisterClient"
+        android:label="registerclient"
+        tools:layout="@layout/activity_register_client" />
+
+    <action
+        android:id="@+id/action_Daftar_to_Regisclient"
+        app:destination="@id/Registerclient"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/RegisterMitra"
+        android:name="com.zainul.buildrrr.RegisterMitra"
+        android:label="registermitra"
+        tools:layout="@layout/activity_register_mitra" />
+
+    <action
+        android:id="@+id/action_Daftar_to_RegisDeveloper"
+        app:destination="@id/RegisterDeveloper"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/RegisterDeveloper"
+        android:name="com.zainul.buildrrr.RegisterDeveloper"
+        android:label="RegisterDeveloper"
+        tools:layout="@layout/activity_register_developer" />
+
+    <action
+        android:id="@+id/action_Daftar_to_LoginDeveloper"
+        app:destination="@id/LoginDeveloper3"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/LoginDeveloper3"
+        android:name="com.zainul.buildrrr.LoginDeveloper"
+        android:label="RegisterDeveloper"
+        tools:layout="@layout/activity_login_developer" />
+
+    <action
+        android:id="@+id/action_Daftar_to_RegisMitra"
+        app:destination="@id/RegisterMitra"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/location"
+        android:name="com.zainul.buildrrr.LocationRead"
+        android:label="homepage"
+        tools:layout="@layout/fragment_location" />
+ <action
+        android:id="@+id/action_Daftar_to_PickRole"
+        app:destination="@id/PickRolee"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/PickRolee"
+        android:name="com.zainul.buildrrr.PickRoleUser"
+        android:label="PickRole"
+        tools:layout="@layout/activity_pick_role_user" />
+
+    <action
+        android:id="@+id/action_Daftar_to_PickRoleLogin"
+        app:destination="@id/PickRoleLogin"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/PickRoleLogin"
+        android:name="com.zainul.buildrrr.PickRoleUserLogin"
+        android:label="PickRole"
+        tools:layout="@layout/activity_pick_role_user_login" />
+
+    <action
+        android:id="@+id/action_login_to_location"
+        app:destination="@id/location"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/locationClient"
+        android:name="com.zainul.buildrrr.LocationReadClient"
+        android:label="locationclient"
+        tools:layout="@layout/activity_location_read_client" />
+
+    <action
+        android:id="@+id/action_login_to_locationClient"
+        app:destination="@id/locationClient"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/mainhome"
+        android:name="com.zainul.buildrrr.mainhome.Home"
+        android:label="homepage"
+        tools:layout="@layout/activity_home" />
+
+    <action
+        android:id="@+id/action_mulai_to_mainhome"
+        app:destination="@id/mainhome"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/logout"
+        android:name="com.zainul.buildrrr.LoginMitra"
+        android:label="logout"
+        tools:layout="@layout/activity_login_mitra" />
+
+    <action
+        android:id="@+id/action_logout_to_login"
+        app:destination="@id/logout"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+</navigation>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "936040983659",
+    "firebase_url": "https://buildrrr-dc97b-default-rtdb.firebaseio.com",
+    "project_id": "buildrrr-dc97b",
+    "storage_bucket": "buildrrr-dc97b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936040983659:android:9b0e5500e6c5e260db152e",
+        "android_client_info": {
+          "package_name": "com.zainul.buildrrr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936040983659-gvv2ed193neu3heugesavmblhkck70ie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zainul.buildrrr",
+            "certificate_hash": "ef54f1f4d2c193e66f819c73cf6ac501f638dde8"
+          }
+        },
+        {
+          "client_id": "936040983659-hq3egd3l8oujr12ogt5n3316enm2bskr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIYN10RkVp6kszGJb9xpl9DVE_vNtWMmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936040983659-hq3egd3l8oujr12ogt5n3316enm2bskr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

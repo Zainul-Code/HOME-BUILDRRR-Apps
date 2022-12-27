@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BUILDRR</string>
+
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home">home</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_Beranda">Beranda</string>
+    <string name="title_Obat">Cari</string>
+    <string name="title_Donasi">Mandor</string>
+    <string name="title_Dokter">Arsitek</string>
+    <string name="title_Personal">Personal</string>
+
+</resources>

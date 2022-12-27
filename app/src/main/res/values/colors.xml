@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="blue">#7BCEFF</color>
+    <color name="merahmuda">#B54A97</color>
+    <color name="putih">#FFFFFF</color>
+    <color name="abu">#525252</color>
+    <color name="ungu">#594AB5</color>
+    <color name="abu2">#414141</color>
+    <color name="abu3">#868686</color>
+    <color name="hitam">#313131</color>
+  <color name="abu4">#212020</color>
+
+    <color name="colorPrimary1">#FFC107</color>
+    <color name="colorPrimaryDark1">#FFC107</color>
+    <color name="colorAccent1">#FF5722</color>
+    <color name="colortextfirst">#000000</color>
+    <color name="colortextsecond">#777474</color>
+    <color name="color_view">#A5A2A2</color>
+    <color name="white">#fff</color>
+    <color name="navy">#16427B</color>
+
+</resources>
