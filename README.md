@@ -1,7 +1,7 @@
 # BUILDRRR-Apps
 Build Your Home Easyly
 
-![Logo](https://user-images.githubusercontent.com/92244055/210802543-fc5240d8-d5af-47c1-a236-8fcb6a249103.png)
+![Logo1x](https://user-images.githubusercontent.com/92244055/210803094-f472179c-68bb-4773-b7cb-8d2c7f21f7be.png)
 
 # Application Overview
 
