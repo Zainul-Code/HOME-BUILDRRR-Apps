@@ -13,5 +13,10 @@
     <string name="title_Donasi">Mandor</string>
     <string name="title_Dokter">Arsitek</string>
     <string name="title_Personal">Personal</string>
+    <string name="title_Arsitek">Arsitek</string>
+    <string name="title_Jelajah">Jelajah</string>
+    <string name="Riwayat">Riwayat</string>
+    <string name="Chat">Chat</string>
+    <string name="Progress">Progress</string>
 
 </resources>

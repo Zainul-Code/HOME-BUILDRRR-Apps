@@ -53,16 +53,6 @@
         app:popUpTo="@id/viewPagerFragment"
         app:popUpToInclusive="true" />
 
-    <fragment
-        android:id="@+id/VeifyPhone"
-        android:name="com.zainul.buildrrr.VerifyPhone"
-        android:label="fragment_home"
-        tools:layout="@layout/activity_verify_phone" />
-    <action
-        android:id="@+id/action_masuk_to_Verifyphone"
-        app:destination="@id/VeifyPhone"
-        app:popUpTo="@id/viewPagerFragment"
-        app:popUpToInclusive="true" />
 
     <action
         android:id="@+id/action_masuk_to_loginaclient"
@@ -87,6 +77,29 @@
         android:name="com.zainul.buildrrr.LoginDeveloper"
         android:label="LoginDeveloper"
         tools:layout="@layout/activity_login_developer" />
+
+    <action
+        android:id="@+id/action_masuk_to_loginmarketing"
+        app:destination="@id/LoginMarketing"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/LoginMarketing"
+        android:name="com.zainul.buildrrr.LoginMarketing"
+        android:label="LoginMarkeitng"
+        tools:layout="@layout/activity_login_marketing" />
+ <action
+        android:id="@+id/action_masuk_to_Registmarketing"
+        app:destination="@id/RegistMarketing"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/RegistMarketing"
+        android:name="com.zainul.buildrrr.RegisterMarketing"
+        android:label="RegistMarketing"
+        tools:layout="@layout/activity_register_marketing" />
 
 
     <action
@@ -130,6 +143,18 @@
         app:popUpToInclusive="true" />
 
     <fragment
+        android:id="@+id/Regisdevpopup"
+        android:name="com.zainul.buildrrr.popup.PopupRegisDev"
+        android:label="Regisdevpopup"
+        tools:layout="@layout/activity_popup_regis_dev" />
+
+    <action
+        android:id="@+id/action_Daftar_to_popupregisdev"
+        app:destination="@id/Regisdevpopup"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
         android:id="@+id/RegisterDeveloper"
         android:name="com.zainul.buildrrr.RegisterDeveloper"
         android:label="RegisterDeveloper"
@@ -153,11 +178,6 @@
         app:popUpTo="@id/viewPagerFragment"
         app:popUpToInclusive="true" />
 
-    <fragment
-        android:id="@+id/location"
-        android:name="com.zainul.buildrrr.LocationRead"
-        android:label="homepage"
-        tools:layout="@layout/fragment_location" />
  <action
         android:id="@+id/action_Daftar_to_PickRole"
         app:destination="@id/PickRolee"
@@ -182,27 +202,9 @@
         android:label="PickRole"
         tools:layout="@layout/activity_pick_role_user_login" />
 
-    <action
-        android:id="@+id/action_login_to_location"
-        app:destination="@id/location"
-        app:popUpTo="@id/viewPagerFragment"
-        app:popUpToInclusive="true" />
-
-    <fragment
-        android:id="@+id/locationClient"
-        android:name="com.zainul.buildrrr.LocationReadClient"
-        android:label="locationclient"
-        tools:layout="@layout/activity_location_read_client" />
-
-    <action
-        android:id="@+id/action_login_to_locationClient"
-        app:destination="@id/locationClient"
-        app:popUpTo="@id/viewPagerFragment"
-        app:popUpToInclusive="true" />
-
     <fragment
         android:id="@+id/mainhome"
-        android:name="com.zainul.buildrrr.mainhome.Home"
+        android:name="com.zainul.buildrrr.mainmitra.Home"
         android:label="homepage"
         tools:layout="@layout/activity_home" />
 

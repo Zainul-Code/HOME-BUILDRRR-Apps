@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.zainul.buildrrr">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -20,6 +21,38 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
+        <activity
+            android:name=".popup.PopupRegistMitra"
+            android:exported="false"
+            tools:ignore="Instantiatable">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LoginMarketing"
+            android:exported="false"
+            tools:ignore="Instantiatable">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RegisterMarketing"
+            android:exported="false"
+            tools:ignore="Instantiatable">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="popup.PopupRegisDev"
+            android:exported="false"
+            tools:ignore="MissingClass">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".LoginDeveloper"
             android:exported="false"
@@ -53,30 +86,43 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Loading"
+            android:name=".loading.Loading"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".VerifyOTP"
+            android:name=".loading.Loadingdev"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".VerifyPhone"
+            android:name=".loading.Loadingdevlogin"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".LocationReadClient"
-            android:exported="false"
-            tools:ignore="Instantiatable">
+            android:name=".loading.Loadingmarketing"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".loading.Loadingmarketinglogin"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".loading.Loadingmitra"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -103,7 +149,7 @@
             android:value="AIzaSyAKfURpC_er7-nAZIx53ay56FmHlMJuQXE" />
 
         <activity
-            android:name=".mainhome.Home"
+            android:name=".mainmitra.Home"
             android:exported="false"
             android:label="@string/title_activity_home">
             <meta-data
@@ -111,9 +157,41 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".LocationRead"
+            android:name=".mainmarketing.Home"
             android:exported="false"
-            tools:ignore="Instantiatable">
+            android:label="@string/title_activity_home">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".mainmitra.UploadActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".maindev.Home"
+            android:exported="false"
+            android:label="@string/title_activity_home">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".maindev.UploadActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".mainclient.Home"
+            android:exported="false"
+            android:label="@string/title_activity_home">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

@@ -1,5 +1,6 @@
 package com.zainul.buildrrr
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.zainul.buildrrr.databinding.ActivityRegisterDeveloperBinding
+import com.zainul.buildrrr.loading.Loadingdev
 import kotlinx.android.synthetic.main.activity_register_developer.*
 
 class RegisterDeveloper : Fragment() {
@@ -42,7 +44,7 @@ class RegisterDeveloper : Fragment() {
 
         }
         bawahMasuk.setOnClickListener {
-            findNavController().navigate(R.id.action_masuk_to_logindeveloper)
+            findNavController().navigate(R.id.action_masuk_to_loginmarketing)
 
         }
 
@@ -85,9 +87,9 @@ class RegisterDeveloper : Fragment() {
 
                             databaseRef.setValue(user).addOnCompleteListener{
                                 if(it.isSuccessful){
-                                    Toast.makeText(activity,"Register Berhasil" ,Toast.LENGTH_SHORT).show();
-                                    findNavController().navigate(R.id.action_masuk_to_loginaclient)
-
+                                    Toast.makeText(activity,"Pendaftaran Berhasil" ,Toast.LENGTH_SHORT).show();
+                                    val intent = Intent(activity, Loadingdev::class.java)
+                                    startActivity(intent)
                                 }
                             }
                         } else {

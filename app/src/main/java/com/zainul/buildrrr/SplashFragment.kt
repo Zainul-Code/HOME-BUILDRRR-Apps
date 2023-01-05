@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
 
 
 class SplashFragment : Fragment() {
@@ -16,23 +17,19 @@ class SplashFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        FirebaseAuth.getInstance().getCurrentUser()
+        val user = FirebaseAuth.getInstance().currentUser
         Handler().postDelayed({
             //kondisi if masih belum aktif function onboardingfinsih belum valid
-            if (onBoardingFinished()) {
+            if (user != null) {
                 findNavController().navigate(R.id.action_Daftar_to_PickRoleLogin)
-                onBoardingFinished()//sementara ptoses yang pertama kali ter eksesuksi adalah kondisi else
+             //sementara ptoses yang pertama kali ter eksesuksi adalah kondisi else
             } else {
                 findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
             }
         }, 6000)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_splash, container, false)
-    }
-
-    private fun onBoardingFinished(): Boolean {
-        val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
-        return sharedPref.getBoolean("Finished", false)
     }
     override fun onAttach(context: Context) {
         super.onAttach(context)

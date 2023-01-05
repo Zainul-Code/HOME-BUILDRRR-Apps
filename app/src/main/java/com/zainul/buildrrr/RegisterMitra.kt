@@ -14,6 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.zainul.buildrrr.databinding.ActivityRegisterMitraBinding
+import com.zainul.buildrrr.loading.Loadingmitra
 import kotlinx.android.synthetic.main.activity_register_mitra.*
 
 
@@ -84,14 +85,14 @@ class RegisterMitra : Fragment() {
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
                             val databaseRef =
-                                database.reference.child("Mitra").child(auth.currentUser!!.uid)
+                                database.reference.child("Arsitek").child(auth.currentUser!!.uid)
                             val user : User = User(email, password, auth.currentUser!!.uid)
 
                             databaseRef.setValue(user).addOnCompleteListener{
                                 if(it.isSuccessful){
-                                    Toast.makeText(activity,"Register Berhasil" ,Toast.LENGTH_SHORT).show();
-                                    findNavController().navigate(R.id.action_masuk_to_loginmitra)
-
+                                    Toast.makeText(activity,"Pendaftaran Berhasil" ,Toast.LENGTH_SHORT).show();
+                                    val intent = Intent(activity, Loadingmitra::class.java)
+                                    startActivity(intent)
                                 }
                             }
                         } else {

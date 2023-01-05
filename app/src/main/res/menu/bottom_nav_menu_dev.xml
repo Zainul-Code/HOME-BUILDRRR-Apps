@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_Home"
+        android:icon="@drawable/home_icon"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_Cari"
+        android:icon="@drawable/chat_icon"
+        android:title="@string/Chat" />
+
+
+    <item
+        android:id="@+id/navigation_Arsitek"
+        android:icon="@drawable/progress_icon"
+        android:title="@string/Progress" />
+
+    <item
+        android:id="@+id/navigation_Personal"
+        android:icon="@drawable/personal_icon"
+        android:title="@string/title_Personal" />
+
+</menu>

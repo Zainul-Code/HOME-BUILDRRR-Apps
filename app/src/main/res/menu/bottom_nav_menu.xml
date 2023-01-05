@@ -10,17 +10,17 @@
     <item
         android:id="@+id/navigation_Obat"
         android:icon="@drawable/obat_icon"
-        android:title="@string/title_Obat" />
+        android:title="@string/title_Jelajah" />
 
     <item
         android:id="@+id/navigation_Donasi"
         android:icon="@drawable/donasi_icon"
-        android:title="@string/title_Donasi" />
+        android:title="@string/title_Arsitek" />
 
     <item
         android:id="@+id/navigation_dokter"
         android:icon="@drawable/dokter_icon"
-        android:title="@string/title_Dokter" />
+        android:title="@string/Riwayat" />
 
     <item
         android:id="@+id/navigation_personal"

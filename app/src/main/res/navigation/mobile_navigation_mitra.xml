@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_dev"
+    app:startDestination="@+id/navigation_HomeMitra">
+
+    <fragment
+        android:id="@+id/navigation_HomeMitra"
+        android:name="com.zainul.buildrrr.mainmitra.ui.home.HomeFragment"
+        android:label="@string/title_Beranda"
+        tools:layout="@layout/fragment_home_mitra" />
+
+    <fragment
+        android:id="@+id/navigation_CariMitra"
+        android:name="com.zainul.buildrrr.mainmitra.ui.cari.CariFragment"
+        android:label="@string/title_Obat"
+        tools:layout="@layout/fragment_cari_mitra" />
+
+    <fragment
+        android:id="@+id/navigation_ArsitekMitra"
+        android:name="com.zainul.buildrrr.mainmitra.ui.arsitek.ArsitekFragment"
+        android:label="@string/title_Arsitek"
+        tools:layout="@layout/fragment_arsitek_mitra" />
+
+    <fragment
+        android:id="@+id/navigation_PersonalMitra"
+        android:name="com.zainul.buildrrr.mainmitra.ui.personal.PersonalFragment"
+        android:label="@string/title_Personal"
+        tools:layout="@layout/fragment_personal_mitra" />
+</navigation>

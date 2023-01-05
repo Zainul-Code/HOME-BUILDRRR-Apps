@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.zainul.buildrrr.databinding.ActivityLoginClientBinding
+import com.zainul.buildrrr.loading.Loading
 import kotlinx.android.synthetic.main.activity_login_client.*
 
 

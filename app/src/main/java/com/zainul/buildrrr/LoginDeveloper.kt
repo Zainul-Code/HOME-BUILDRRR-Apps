@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.zainul.buildrrr.databinding.ActivityLoginDeveloperBinding
+import com.zainul.buildrrr.loading.Loadingdevlogin
 import kotlinx.android.synthetic.main.activity_login_developer.*
 
 class LoginDeveloper : Fragment() {
@@ -79,8 +80,9 @@ class LoginDeveloper : Fragment() {
                             databaseRef.setValue(user).addOnCompleteListener{
                                 if(it.isSuccessful){
                                     Toast.makeText(activity, "Selamat datang $email", Toast.LENGTH_SHORT).show()
-                                    val intent = Intent(activity, Loading::class.java)
+                                    val intent = Intent(activity, Loadingdevlogin::class.java)
                                     startActivity(intent)
+
                                 }
                             }
                         } else {

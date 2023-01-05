@@ -86,7 +86,7 @@ class RegisterClient : Fragment() {
 
                             databaseRef.setValue(user).addOnCompleteListener{
                                 if(it.isSuccessful){
-                                    Toast.makeText(activity,"Register Berhasil" ,Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(activity,"Pendaftaran Berhasil" ,Toast.LENGTH_SHORT).show();
                                     findNavController().navigate(R.id.action_masuk_to_loginaclient)
 
                                 }
