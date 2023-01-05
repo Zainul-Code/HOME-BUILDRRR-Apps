@@ -19,13 +19,14 @@ Build Your Home Easyly
 
 # Whats is needed
 - Gradle 7.4 Version ( Up To Date )
-- Firebase Auth
+- Firebase All Set
 - Api 29 Min
 - SDK
 
 # Features
 - Firebase Auth
 - Realtime Database
-- 5 Role User ( Complexity an Application )
+- 5 Role User in 1 Apps( Complexity an Application )
+( Client, Developer, Marketing, Arsitek, Mandor )
 - More Featues Still Build 
 
