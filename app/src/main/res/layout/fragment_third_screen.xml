@@ -8,38 +8,38 @@
     tools:context=".onboarding.screens.ThirdScreen">
 
 
-
     <Button
         android:id="@+id/LoginMitra1"
         android:layout_width="320dp"
         android:layout_height="50dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/button_rounded"
         android:text="Masuk"
         android:textColor="@color/putih"
         android:textSize="14sp"
+        android:fontFamily="@font/poppinssemibold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/LoginClient2"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:background="@drawable/button_rounded_putih"
+        android:background="@drawable/button_daftar"
         android:text="Daftar"
         android:textColor="@color/navy"
         android:textSize="14sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/poppinssemibold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/LoginMitra1"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/LoginMitra1"
         app:layout_constraintTop_toBottomOf="@+id/LoginMitra1"
-        app:layout_constraintVertical_bias="0.452" />
+        app:layout_constraintVertical_bias="0.136" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/imageView4"
@@ -50,7 +50,7 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205"
+        app:layout_constraintVertical_bias="0.100"
         app:lottie_autoPlay="true"
         app:lottie_fileName="onboard3.json"
         app:lottie_loop="true" />
@@ -62,21 +62,20 @@
         android:text="Pantau Progres"
         android:textColor="@color/navy"
         android:textSize="27sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView14"
+        android:fontFamily="@font/poppinsbold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.805" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:text="Pantau progres pembangunan"
         android:textSize="19sp"
-        android:textStyle="normal"
+        android:fontFamily="@font/poppinssemibold"
         app:layout_constraintEnd_toEndOf="@+id/textView10"
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="@+id/textView10"
@@ -89,23 +88,11 @@
         android:layout_height="wrap_content"
         android:text="dimanapun kamu berada"
         android:textSize="19sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/imageView14"
+        android:fontFamily="@font/poppinssemibold"
         app:layout_constraintEnd_toEndOf="@+id/textView13"
         app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="110dp"
-        android:layout_height="11dp"
-        android:src="@drawable/indicator3"
-        app:layout_constraintBottom_toTopOf="@+id/LoginMitra1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.76" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
