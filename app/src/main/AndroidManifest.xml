@@ -22,6 +22,13 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".maindev.ui.home.Posting"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".popup.PopupRegistMitra"
             android:exported="false"
             tools:ignore="Instantiatable">
@@ -158,6 +165,14 @@
         </activity>
         <activity
             android:name=".mainmarketing.Home"
+            android:exported="false"
+            android:label="@string/title_activity_home">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".mainmarketing.UploadActivity"
             android:exported="false"
             android:label="@string/title_activity_home">
             <meta-data

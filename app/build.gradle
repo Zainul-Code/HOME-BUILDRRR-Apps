@@ -76,4 +76,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:21.0.1'
     implementation 'com.google.maps.android:android-maps-utils:2.3.0'
     implementation 'com.google.maps.android:maps-utils-ktx:3.4.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.jpardogo.googleprogressbar:library:1.2.0'
+
 }

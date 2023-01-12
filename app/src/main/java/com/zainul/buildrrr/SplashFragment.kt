@@ -22,10 +22,10 @@ class SplashFragment : Fragment() {
         Handler().postDelayed({
             //kondisi if masih belum aktif function onboardingfinsih belum valid
             if (user != null) {
-                findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
+                findNavController().navigate(R.id.action_Daftar_to_PickRoleLogin)
              //sementara ptoses yang pertama kali ter eksesuksi adalah kondisi else
             } else {
-                findNavController().navigate(R.id.action_Daftar_to_PickRoleLogin)
+                findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
             }
         }, 6000)
         // Inflate the layout for this fragment
@@ -33,7 +33,6 @@ class SplashFragment : Fragment() {
     }
     override fun onAttach(context: Context) {
         super.onAttach(context)
-
 
     }
 

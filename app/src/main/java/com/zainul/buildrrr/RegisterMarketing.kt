@@ -40,11 +40,11 @@ class RegisterMarketing : Fragment() {
         database = FirebaseDatabase.getInstance()
 
         btnRegis.setOnClickListener {
-            findNavController().navigate(R.id.action_masuk_to_logindeveloper)
+            findNavController().navigate(R.id.action_masuk_to_loginmarketing)
 
         }
         bawahMasuk.setOnClickListener {
-            findNavController().navigate(R.id.action_masuk_to_logindeveloper)
+            findNavController().navigate(R.id.action_masuk_to_loginmarketing)
 
         }
 

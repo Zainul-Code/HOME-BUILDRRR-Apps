@@ -6,6 +6,29 @@
     android:layout_height="match_parent"
     android:background="@color/navy">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/profiledev"
+        app:civ_border_color="#FF000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintHorizontal_bias="0.772"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -48,8 +71,8 @@
         app:layout_constraintEnd_toEndOf="@+id/textView12"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.041" />
+        app:layout_constraintTop_toBottomOf="@+id/profile"
+        app:layout_constraintVertical_bias="0.027" />
 
     <EditText
         android:id="@+id/uploadnama"
@@ -142,7 +165,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView15"
         app:layout_constraintTop_toBottomOf="@+id/textView15"
-        app:layout_constraintVertical_bias="0.163" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/uploadImage2"
@@ -173,4 +196,6 @@
         app:layout_constraintTop_toBottomOf="@+id/uploadImage2"
         app:layout_constraintVertical_bias="0.644" />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

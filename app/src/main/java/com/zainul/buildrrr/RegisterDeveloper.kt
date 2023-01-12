@@ -44,7 +44,7 @@ class RegisterDeveloper : Fragment() {
 
         }
         bawahMasuk.setOnClickListener {
-            findNavController().navigate(R.id.action_masuk_to_loginmarketing)
+            findNavController().navigate(R.id.action_masuk_to_logindeveloper)
 
         }
 
