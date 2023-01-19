@@ -14,6 +14,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.zainul.buildrrr.R
 import com.zainul.buildrrr.databinding.ActivityUpload2Binding
+import com.zainul.buildrrr.loading.Loadingdevlogin
 
 class UploadActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUpload2Binding
@@ -26,6 +27,7 @@ class UploadActivity : AppCompatActivity() {
     var uri2: Uri? = null
     var uri3: Uri? = null
     var profile: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
@@ -141,9 +143,6 @@ class UploadActivity : AppCompatActivity() {
         val dataClass = DataClass(title, desc, imageURL, imageURL2, profile)
         database.child(auth.currentUser!!.uid).setValue(dataClass).addOnSuccessListener {
 
-            binding.uploadnama.text.clear()
-            binding.uploademail.text.clear()
-
             Toast.makeText(this, "Data Tersimpan", Toast.LENGTH_SHORT).show()
             val home = Intent(this@UploadActivity, Home::class.java)
             startActivity(home)
@@ -152,8 +151,6 @@ class UploadActivity : AppCompatActivity() {
 
             Toast.makeText(this, "Gagal", Toast.LENGTH_SHORT).show()
 
-
         }
-
     }
 }

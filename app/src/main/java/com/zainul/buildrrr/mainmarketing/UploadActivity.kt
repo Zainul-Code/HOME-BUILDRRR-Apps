@@ -8,24 +8,33 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.zainul.buildrrr.R
 import com.zainul.buildrrr.databinding.ActivityUploadMarketingBinding
+import com.zainul.buildrrr.maindev.DataClass
 
 class UploadActivity : AppCompatActivity() {
     private lateinit var binding: ActivityUploadMarketingBinding
+    private lateinit var auth: FirebaseAuth
     private lateinit var database: DatabaseReference
+
     var imageURL: String? = null
     var uri: Uri? = null
     var imageURL2: String? = null
     var uri2: Uri? = null
+    var uri3: Uri? = null
+    var profile: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         binding = ActivityUploadMarketingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        auth = FirebaseAuth.getInstance()
+
         val activityResultLauncher = registerForActivityResult<Intent, ActivityResult>(
             ActivityResultContracts.StartActivityForResult()
         ) { result ->
@@ -37,16 +46,28 @@ class UploadActivity : AppCompatActivity() {
                 Toast.makeText(this@UploadActivity, "Tidak ada Gambar Terpilih", Toast.LENGTH_SHORT).show()
             }
         }
-            val activityResultLauncher1 = registerForActivityResult<Intent, ActivityResult>(
-                ActivityResultContracts.StartActivityForResult()
-            ) { result ->
-                if (result.resultCode == RESULT_OK) {
-                    val data1 = result.data
-                    uri2 = data1!!.data
-                    binding.uploadImage2.setImageURI(uri2)
-                } else {
-                    Toast.makeText(this@UploadActivity, "Tidak ada Gambar Terpilih", Toast.LENGTH_SHORT)
-                        .show()
+        val activityResultLauncher1 = registerForActivityResult<Intent, ActivityResult>(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            if (result.resultCode == RESULT_OK) {
+                val data1 = result.data
+                uri2 = data1!!.data
+                binding.uploadImage2.setImageURI(uri2)
+            } else {
+                Toast.makeText(this@UploadActivity, "Tidak ada Gambar Terpilih", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        }
+        val activityResultLauncher3 = registerForActivityResult<Intent, ActivityResult>(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            if (result.resultCode == RESULT_OK) {
+                val data3 = result.data
+                uri3 = data3!!.data
+                binding.profile.setImageURI(uri3)
+            } else {
+                Toast.makeText(this@UploadActivity, "Tidak ada Gambar Terpilih", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
         binding.uploadImage2.setOnClickListener {
@@ -58,6 +79,11 @@ class UploadActivity : AppCompatActivity() {
             val photoPicker = Intent(Intent.ACTION_PICK)
             photoPicker.type = "image/b"
             activityResultLauncher.launch(photoPicker)
+        }
+        binding.profile.setOnClickListener {
+            val photoPicker3 = Intent(Intent.ACTION_PICK)
+            photoPicker3.type = "image/c"
+            activityResultLauncher3.launch(photoPicker3)
         }
         //hanya 1 fungsi yang terpanggil
         binding.send.setOnClickListener {
@@ -78,38 +104,44 @@ class UploadActivity : AppCompatActivity() {
             while (!uriTask.isComplete);
             val urlImage = uriTask.result
             imageURL2 = urlImage.toString()
-            uploadData()
             dialog.dismiss()
+            uploadData()
         }.addOnFailureListener {
             dialog.dismiss()
         }
+
         val storageReference1 = FirebaseStorage.getInstance().reference.child("KTP")
             .child(uri2!!.lastPathSegment!!)
-        val builder1 = AlertDialog.Builder(this@UploadActivity)
-        builder1.setCancelable(false)
-        builder1.setView(R.layout.progress_layout)
-        val dialog1 = builder1.create()
-        dialog1.show()
         storageReference1.putFile(uri!!).addOnSuccessListener { taskSnapshot1 ->
-                val uriTask1 = taskSnapshot1.storage.downloadUrl
-                while (!uriTask1.isComplete);
-                val urlImage1 = uriTask1.result
-                imageURL = urlImage1.toString()
-                uploadData()
-                dialog.dismiss()
-            }.addOnFailureListener {
-                dialog.dismiss()
-            }
+            val uriTask1 = taskSnapshot1.storage.downloadUrl
+            while (!uriTask1.isComplete);
+            val urlImage1 = uriTask1.result
+            imageURL = urlImage1.toString()
+            dialog.dismiss()
+            uploadData()
+        }.addOnFailureListener {
+            dialog.dismiss()
+        }
+        val storageReference3 = FirebaseStorage.getInstance().reference.child("Profile")
+            .child(uri2!!.lastPathSegment!!)
+        storageReference3.putFile(uri3!!).addOnSuccessListener { taskSnapshot1 ->
+            val uriTask3 = taskSnapshot1.storage.downloadUrl
+            while (!uriTask3.isComplete);
+            val urlImage3 = uriTask3.result
+            profile = urlImage3.toString()
+            dialog.dismiss()
+            uploadData()
+        }.addOnFailureListener {
+            dialog.dismiss()
+        }
     }
+
     private fun uploadData(){
         val title = binding.uploadnama.text.toString()
         val desc = binding.uploademail.text.toString().trim()
         database = FirebaseDatabase.getInstance().getReference("Data Marketing")
-        val dataClass = DataClass(title, desc, imageURL, imageURL2)
-        database.child(title).setValue(dataClass).addOnSuccessListener {
-
-            binding.uploadnama.text.clear()
-            binding.uploademail.text.clear()
+        val dataClass = DataClass(title, desc, imageURL, imageURL2, profile)
+        database.child(auth.currentUser!!.uid).setValue(dataClass).addOnSuccessListener {
 
             Toast.makeText(this, "Data Tersimpan", Toast.LENGTH_SHORT).show()
             val home = Intent(this@UploadActivity, Home::class.java)

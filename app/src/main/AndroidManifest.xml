@@ -22,7 +22,35 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".maindev.ui.cari.ChatingActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".maindev.ui.home.Transaksi"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".maindev.ui.personal.DetailPost"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".maindev.ui.home.Posting"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".maindev.ui.personal.PodukSaya"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -219,7 +247,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".LoginMitra"
             android:exported="false"
@@ -228,7 +255,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".loading.Loadingmitralogin"
             android:exported="false"
@@ -237,7 +263,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -6,4 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".maindev.ui.cari.CariFragment">
 
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chat"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/navy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilemarketing"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        app:civ_border_color="#FF000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView35"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <TextView
+        android:id="@+id/namamar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/navy"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/profilemarketing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toEndOf="@+id/profilemarketing"
+        app:layout_constraintTop_toTopOf="@+id/profilemarketing"
+        app:layout_constraintVertical_bias="0.375" />
+
+    <TextView
+        android:id="@+id/pesanterbaru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/navy"
+        app:layout_constraintBottom_toBottomOf="@+id/profilemarketing"
+        app:layout_constraintEnd_toEndOf="@+id/namamar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/namamar"
+        app:layout_constraintTop_toBottomOf="@+id/namamar"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/garis"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilemarketing"
+        app:layout_constraintVertical_bias="0.032" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

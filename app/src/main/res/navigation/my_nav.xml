@@ -67,6 +67,30 @@
         tools:layout="@layout/activity_login_mitra" />
 
     <action
+        android:id="@+id/click_to_produksaya"
+        app:destination="@id/ProdukSaya"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/ProdukSaya"
+        android:name="com.zainul.buildrrr.maindev.ui.personal.PodukSaya"
+        android:label="ProdukSaya"
+        tools:layout="@layout/activity_poduk_saya" />
+
+<action
+        android:id="@+id/click_to_personal"
+        app:destination="@id/Personal"
+        app:popUpTo="@id/viewPagerFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/Personal"
+        android:name="com.zainul.buildrrr.maindev.ui.personal.PersonalFragment"
+        android:label="Personal"
+        tools:layout="@layout/fragment_personal_dev" />
+
+    <action
         android:id="@+id/action_masuk_to_logindeveloper"
         app:destination="@id/LoginDeveloper"
         app:popUpTo="@id/viewPagerFragment"
