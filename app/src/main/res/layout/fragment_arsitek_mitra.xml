@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".mainmitra.ui.arsitek.ArsitekFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Progress"
+        android:textColor="@color/navy"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="19sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/progres_klien"
+        android:layout_width="380dp"
+        android:layout_height="120dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="50dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:text="Nama Klien"
+            android:textColor="@color/navy"
+            android:textSize="16sp"></TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="150dp">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/profil_klien"
+            android:layout_gravity="center"
+            android:layout_marginRight="130dp">
+
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

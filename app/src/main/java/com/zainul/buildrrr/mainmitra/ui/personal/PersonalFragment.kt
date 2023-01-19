@@ -21,6 +21,8 @@ class PersonalFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentPersonalMitraBinding.inflate(inflater, container, false)
+
+
         return binding.root
     }
 
