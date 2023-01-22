@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".arsitekprogres1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Progress"
+        android:textColor="@color/navy"
+        android:fontFamily="@font/poppinssemibold"
+        android:textSize="19sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+    </TextView>
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/profil_klien"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp">
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Nama Klien"
+        android:textColor="@color/navy"
+        android:textSize="19sp"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="125dp"></TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lihat_brief"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="220dp"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="@color/abu3"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Lihat Brief"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            >
+        </TextView>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:background="@drawable/progressbar1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp">
+
+    </ImageView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tambahprogress"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="360dp"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="@color/navy"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Tambah Progress"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            >
+        </TextView>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

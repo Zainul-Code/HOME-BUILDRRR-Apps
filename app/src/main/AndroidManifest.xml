@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.zainul.buildrrr">
+    package="com.zainul.buildrrr" >
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,7 +20,14 @@
         android:roundIcon="@drawable/logosplash"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:targetApi="31">
+        tools:targetApi="31" >
+        <activity
+            android:name=".arsitekprogres1"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".mainmarketing.ui.home.AdddingTxCleint"
             android:exported="false">
@@ -37,35 +44,35 @@
         </activity>
         <activity
             android:name=".maindev.ui.cari.ChatingActivity"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".maindev.ui.home.Transaksi"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".maindev.ui.personal.DetailPost"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".maindev.ui.home.Posting"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".maindev.ui.personal.PodukSaya"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -73,7 +80,7 @@
         <activity
             android:name=".popup.PopupRegistMitra"
             android:exported="false"
-            tools:ignore="Instantiatable">
+            tools:ignore="Instantiatable" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -81,7 +88,7 @@
         <activity
             android:name=".LoginMarketing"
             android:exported="false"
-            tools:ignore="Instantiatable">
+            tools:ignore="Instantiatable" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -89,7 +96,7 @@
         <activity
             android:name=".RegisterMarketing"
             android:exported="false"
-            tools:ignore="Instantiatable">
+            tools:ignore="Instantiatable" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -97,7 +104,7 @@
         <activity
             android:name="popup.PopupRegisDev"
             android:exported="false"
-            tools:ignore="MissingClass">
+            tools:ignore="MissingClass" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -105,7 +112,7 @@
         <activity
             android:name=".LoginDeveloper"
             android:exported="false"
-            tools:ignore="Instantiatable">
+            tools:ignore="Instantiatable" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -113,7 +120,7 @@
         <activity
             android:name=".RegisterDeveloper"
             android:exported="false"
-            tools:ignore="Instantiatable">
+            tools:ignore="Instantiatable" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -121,7 +128,7 @@
         <activity
             android:name=".PickRoleUserLogin"
             android:exported="false"
-            tools:ignore="Instantiatable">
+            tools:ignore="Instantiatable" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -129,49 +136,49 @@
         <activity
             android:name=".PickRoleUser"
             android:exported="false"
-            tools:ignore="Instantiatable">
+            tools:ignore="Instantiatable" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".loading.Loading"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".loading.Loadingdev"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".loading.Loadingdevlogin"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".loading.Loadingmarketing"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".loading.Loadingmarketinglogin"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".loading.Loadingmitra"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -179,7 +186,7 @@
         <activity
             android:name=".RegisterClient"
             android:exported="false"
-            tools:ignore="Instantiatable">
+            tools:ignore="Instantiatable" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -187,7 +194,7 @@
         <activity
             android:name=".LoginClient"
             android:exported="false"
-            tools:ignore="Instantiatable">
+            tools:ignore="Instantiatable" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -200,7 +207,7 @@
         <activity
             android:name=".mainmitra.Home"
             android:exported="false"
-            android:label="@string/title_activity_home">
+            android:label="@string/title_activity_home" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -208,7 +215,7 @@
         <activity
             android:name=".mainmarketing.Home"
             android:exported="false"
-            android:label="@string/title_activity_home">
+            android:label="@string/title_activity_home" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -216,7 +223,7 @@
         <activity
             android:name=".mainmarketing.UploadActivity"
             android:exported="false"
-            android:label="@string/title_activity_home">
+            android:label="@string/title_activity_home" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -224,7 +231,7 @@
         <activity
             android:name=".mainmitra.UploadActivity"
             android:exported="false"
-            android:label="@string/title_activity_home">
+            android:label="@string/title_activity_home" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -232,7 +239,7 @@
         <activity
             android:name=".maindev.Home"
             android:exported="false"
-            android:label="@string/title_activity_home">
+            android:label="@string/title_activity_home" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -240,7 +247,7 @@
         <activity
             android:name=".maindev.UploadActivity"
             android:exported="false"
-            android:label="@string/title_activity_home">
+            android:label="@string/title_activity_home" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -248,7 +255,7 @@
         <activity
             android:name=".mainclient.Home"
             android:exported="false"
-            android:label="@string/title_activity_home">
+            android:label="@string/title_activity_home" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -256,7 +263,7 @@
         <activity
             android:name=".RegisterMitra"
             android:exported="false"
-            tools:ignore="Instantiatable">
+            tools:ignore="Instantiatable" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -264,7 +271,7 @@
         <activity
             android:name=".LoginMitra"
             android:exported="false"
-            tools:ignore="Instantiatable">
+            tools:ignore="Instantiatable" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -272,14 +279,14 @@
         <activity
             android:name=".loading.Loadingmitralogin"
             android:exported="false"
-            tools:ignore="Instantiatable">
+            tools:ignore="Instantiatable" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
