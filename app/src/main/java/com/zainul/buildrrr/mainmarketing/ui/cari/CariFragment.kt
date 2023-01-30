@@ -47,12 +47,12 @@ class CariFragment : Fragment() {
         database = Firebase.database.reference
 
         binding.profilemarketing.setOnClickListener {
-            val chat = Intent(activity, ChatingActivity::class.java)
+            val chat = Intent(activity, ChatingClient::class.java)
             startActivity(chat)
         }
-        database.child("Data Marketing").child("XTM0dvSxOnWC2iEyTXRxkIY3nsk2").get().addOnSuccessListener {
+        database.child("Client").child("dsS4LICJtUYjaefi3HVuyaTxjem2").get().addOnSuccessListener {
             if (it.exists()) {
-                val name1 = it.child("datanama").value
+                val name1 = it.child("email").value
 
                 binding.namamar.text = name1.toString()
             }
@@ -70,18 +70,5 @@ class CariFragment : Fragment() {
         }.addOnFailureListener {
             Log.e("firebase", "Gagal Memuat Data")
         }
-        getMarketingProfile()
-
-    }
-
-    private fun getMarketingProfile() {
-        val databaseReference1 =
-            FirebaseDatabase.getInstance().getReference("Data Marketing")
-        databaseReference1.child("XTM0dvSxOnWC2iEyTXRxkIY3nsk2").get()
-            .addOnSuccessListener {
-                val profile1 = it.child("profile").value.toString()
-
-                Glide.with(this).load(profile1).into(profilemarketing)
-            }
     }
 }

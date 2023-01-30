@@ -62,11 +62,31 @@ class HomeFragment : Fragment() {
             }.addOnFailureListener {
                 Log.e("firebase", "Gagal Memuat Data")
             }
-            getMarketingProfile()
+    database.child("Tagihan").child(auth.currentUser!!.uid).get()
+    .addOnSuccessListener {
+        if (it.exists()) {
+            val name1 = it.child("nominal").value
 
-        database.child("Data Marketing").child("XTM0dvSxOnWC2iEyTXRxkIY3nsk2").get().addOnSuccessListener {
+            binding.totaltransaksi.text = name1.toString()
+        }
+        Log.i("firebase", "Data Ditemukan ${it.value}")
+    }.addOnFailureListener {
+        Log.e("firebase", "Gagal Memuat Data")
+    }
+        database.child("Postingan Developer").child("izRSoeXxJ5W1vbXkrdHk7OQXofu1").get()
+            .addOnSuccessListener {
+                if (it.exists()) {
+                    val tipe = it.child("inptipe").value
+
+                    binding.tiperumah.text = tipe.toString()
+                }
+                Log.i("firebase", "Data Ditemukan ${it.value}")
+            }.addOnFailureListener {
+                Log.e("firebase", "Gagal Memuat Data")
+            }
+        database.child("Client").child("dsS4LICJtUYjaefi3HVuyaTxjem2").get().addOnSuccessListener {
             if (it.exists()) {
-                val name1 = it.child("datanama").value
+                val name1 = it.child("email").value
 
                 binding.namacleint.text = name1.toString()
             }
@@ -74,21 +94,8 @@ class HomeFragment : Fragment() {
         }.addOnFailureListener {
             Log.e("firebase", "Gagal Memuat Data")
         }
-        getCleintProfile()
-
+        getMarketingProfile()
     }
-
-    private fun getCleintProfile() {
-        val databaseReference1 =
-            FirebaseDatabase.getInstance().getReference("Data Marketing")
-        databaseReference1.child("XTM0dvSxOnWC2iEyTXRxkIY3nsk2").get()
-            .addOnSuccessListener {
-                val profile1 = it.child("profile").value.toString()
-
-                Glide.with(this).load(profile1).into(profilclient)
-            }
-    }
-
     private fun getMarketingProfile() {
         val databaseReference1 =
             FirebaseDatabase.getInstance().getReference("Data Marketing")

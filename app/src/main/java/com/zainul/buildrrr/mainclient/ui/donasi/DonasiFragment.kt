@@ -1,4 +1,4 @@
-package com.zainul.buildrrr.mainhome.ui.donasi
+package com.zainul.buildrrr.mainclient.ui.donasi
 
 import android.os.Bundle
 import android.view.LayoutInflater

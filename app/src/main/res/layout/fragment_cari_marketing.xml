@@ -26,6 +26,7 @@
         android:layout_width="74dp"
         android:layout_height="74dp"
         app:civ_border_color="#FF000000"
+        android:src="@drawable/profiledev"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.127"

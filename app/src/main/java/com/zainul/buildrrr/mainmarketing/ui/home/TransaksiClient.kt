@@ -36,10 +36,10 @@ class TransaksiClient : AppCompatActivity() {
             val home = Intent(this, AdddingTxCleint::class.java)
             startActivity(home)
         }
-        database.child("Data Marketing").child("XTM0dvSxOnWC2iEyTXRxkIY3nsk2").get()
+        database.child("Client").child("dsS4LICJtUYjaefi3HVuyaTxjem2").get()
             .addOnSuccessListener {
                 if (it.exists()) {
-                    val name1 = it.child("datanama").value
+                    val name1 = it.child("email").value
 
                     binding.namacleint.text = name1.toString()
                 }
@@ -47,18 +47,49 @@ class TransaksiClient : AppCompatActivity() {
             }.addOnFailureListener {
                 Log.e("firebase", "Gagal Memuat Data")
             }
-        getMarketingProfile()
-
-    }
-
-    private fun getMarketingProfile() {
-        val databaseReference1 =
-            FirebaseDatabase.getInstance().getReference("Data Marketing")
-        databaseReference1.child("XTM0dvSxOnWC2iEyTXRxkIY3nsk2").get()
+        database.child("Pemesanan").child("dsS4LICJtUYjaefi3HVuyaTxjem2").get()
             .addOnSuccessListener {
-                val profile1 = it.child("profile").value.toString()
+                if (it.exists()) {
+                    val name1 = it.child("cicilan").value
 
-                Glide.with(this).load(profile1).into(profileclient)
+                    binding.datacicilan.text = name1.toString()
+                }
+                Log.i("firebase", "Data Ditemukan ${it.value}")
+            }.addOnFailureListener {
+                Log.e("firebase", "Gagal Memuat Data")
+            }
+        database.child("Pemesanan").child("dsS4LICJtUYjaefi3HVuyaTxjem2").get()
+            .addOnSuccessListener {
+                if (it.exists()) {
+                    val name1 = it.child("uangmuka").value
+
+                    binding.datauangmuka.text = name1.toString()
+                }
+                Log.i("firebase", "Data Ditemukan ${it.value}")
+            }.addOnFailureListener {
+                Log.e("firebase", "Gagal Memuat Data")
+            }
+        database.child("Pemesanan").child("dsS4LICJtUYjaefi3HVuyaTxjem2").get()
+            .addOnSuccessListener {
+                if (it.exists()) {
+                    val name1 = it.child("inptgl").value
+
+                    binding.datasurvey.text = name1.toString()
+                }
+                Log.i("firebase", "Data Ditemukan ${it.value}")
+            }.addOnFailureListener {
+                Log.e("firebase", "Gagal Memuat Data")
+            }
+        database.child("Tagihan").child(auth.currentUser!!.uid).get()
+            .addOnSuccessListener {
+                if (it.exists()) {
+                    val name1 = it.child("nominal").value
+
+                    binding.nominalakumulasi.text = name1.toString()
+                }
+                Log.i("firebase", "Data Ditemukan ${it.value}")
+            }.addOnFailureListener {
+                Log.e("firebase", "Gagal Memuat Data")
             }
     }
 }

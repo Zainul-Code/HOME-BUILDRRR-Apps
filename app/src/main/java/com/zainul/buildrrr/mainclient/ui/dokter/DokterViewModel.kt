@@ -1,4 +1,4 @@
-package com.zainul.buildrrr.mainhome.ui.dokter
+package com.zainul.buildrrr.mainclient.ui.dokter
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

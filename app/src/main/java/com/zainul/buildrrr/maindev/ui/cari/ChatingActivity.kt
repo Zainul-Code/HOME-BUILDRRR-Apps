@@ -22,7 +22,6 @@ class ChatingActivity : AppCompatActivity() {
     private lateinit var firebaseStorage: FirebaseStorage
     private lateinit var database: DatabaseReference
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()

@@ -1,4 +1,4 @@
-package com.zainul.buildrrr.mainhome.ui.obat
+package com.zainul.buildrrr.mainclient.ui.obat
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

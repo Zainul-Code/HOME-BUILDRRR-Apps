@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.bumptech.glide.Glide
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -12,7 +12,6 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.zainul.buildrrr.databinding.ActivityAdddingTxCleintBinding
-import kotlinx.android.synthetic.main.activity_addding_tx_cleint.*
 
 class AdddingTxCleint : AppCompatActivity() {
     private lateinit var binding: ActivityAdddingTxCleintBinding
@@ -33,13 +32,16 @@ class AdddingTxCleint : AppCompatActivity() {
 
         supportActionBar?.hide()
         binding.tambahtagihan.setOnClickListener {
-            val home = Intent(this, AdddingTxCleint::class.java)
+            uploadData()
+        }
+        binding.cekpembayaran.setOnClickListener {
+            val home = Intent(this, ShowTagihan::class.java)
             startActivity(home)
         }
-        database.child("Data Marketing").child("XTM0dvSxOnWC2iEyTXRxkIY3nsk2").get()
+        database.child("Client").child("dsS4LICJtUYjaefi3HVuyaTxjem2").get()
             .addOnSuccessListener {
                 if (it.exists()) {
-                    val name1 = it.child("datanama").value
+                    val name1 = it.child("email").value
 
                     binding.namacleint.text = name1.toString()
                 }
@@ -47,18 +49,62 @@ class AdddingTxCleint : AppCompatActivity() {
             }.addOnFailureListener {
                 Log.e("firebase", "Gagal Memuat Data")
             }
-        getMarketingProfile()
+        database.child("Tagihan").child(auth.currentUser!!.uid).get()
+            .addOnSuccessListener {
+                if (it.exists()) {
+                    val name1 = it.child("nama").value
+
+                    binding.shownamatagihan.text = name1.toString()
+                }
+                Log.i("firebase", "Data Ditemukan ${it.value}")
+            }.addOnFailureListener {
+                Log.e("firebase", "Gagal Memuat Data")
+            }
+        database.child("Tagihan").child(auth.currentUser!!.uid).get()
+            .addOnSuccessListener {
+                if (it.exists()) {
+                    val name1 = it.child("nominal").value
+
+                    binding.nominalakumulasi.text = name1.toString()
+                }
+                Log.i("firebase", "Data Ditemukan ${it.value}")
+            }.addOnFailureListener {
+                Log.e("firebase", "Gagal Memuat Data")
+            }
+        database.child("Tagihan").child(auth.currentUser!!.uid).get()
+            .addOnSuccessListener {
+                if (it.exists()) {
+                    val name1 = it.child("nominal").value
+
+                    binding.shownominaltagihan.text = name1.toString()
+                }
+                Log.i("firebase", "Data Ditemukan ${it.value}")
+            }.addOnFailureListener {
+                Log.e("firebase", "Gagal Memuat Data")
+            }
 
     }
 
-    private fun getMarketingProfile() {
-        val databaseReference1 =
-            FirebaseDatabase.getInstance().getReference("Data Marketing")
-        databaseReference1.child("XTM0dvSxOnWC2iEyTXRxkIY3nsk2").get()
-            .addOnSuccessListener {
-                val profile1 = it.child("profile").value.toString()
+    private fun uploadData() {
 
-                Glide.with(this).load(profile1).into(profileclient)
+            val nama = binding.namatagihan.text.toString()
+            val nominal = binding.nominaltagihan.text.toString()
+
+
+            database = FirebaseDatabase.getInstance().getReference("Tagihan")
+            val dataClass = Data(nama, nominal)
+            database.child(auth.currentUser!!.uid).setValue(dataClass).addOnSuccessListener {
+
+
+                Toast.makeText(this, "Tagihan diTambahkan", Toast.LENGTH_SHORT).show()
+                val home = Intent(this@AdddingTxCleint, AdddingTxCleint::class.java)
+                startActivity(home)
+                finish()
+            }.addOnFailureListener {
+
+                Toast.makeText(this, "Gagal", Toast.LENGTH_SHORT).show()
+
+
             }
     }
 }

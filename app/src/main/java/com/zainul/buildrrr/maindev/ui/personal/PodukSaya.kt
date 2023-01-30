@@ -14,7 +14,6 @@ import com.google.firebase.storage.FirebaseStorage
 import com.zainul.buildrrr.databinding.ActivityPodukSayaBinding
 import com.zainul.buildrrr.maindev.Home
 import kotlinx.android.synthetic.main.activity_poduk_saya.*
-import kotlinx.android.synthetic.main.fragment_personal_dev.view.*
 
 class PodukSaya : AppCompatActivity() {
 
@@ -22,7 +21,6 @@ class PodukSaya : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var firebaseStorage: FirebaseStorage
     private lateinit var database: DatabaseReference
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

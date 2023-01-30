@@ -1,4 +1,4 @@
-package com.zainul.buildrrr.mainhome.ui.home
+package com.zainul.buildrrr.mainclient.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

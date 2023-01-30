@@ -7,31 +7,31 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.zainul.buildrrr.mainhome.ui.home.HomeFragment"
+        android:name="com.zainul.buildrrr.mainclient.ui.home.HomeFragment"
         android:label="@string/title_Beranda"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_Obat"
-        android:name="com.zainul.buildrrr.mainhome.ui.obat.ObatFragment"
+        android:name="com.zainul.buildrrr.mainclient.ui.obat.ObatFragment"
         android:label="@string/title_Obat"
         tools:layout="@layout/fragment_obat" />
 
     <fragment
         android:id="@+id/navigation_Donasi"
-        android:name="com.zainul.buildrrr.mainhome.ui.donasi.DonasiFragment"
+        android:name="com.zainul.buildrrr.mainclient.ui.donasi.DonasiFragment"
         android:label="@string/title_Donasi"
         tools:layout="@layout/fragment_donasi" />
 
     <fragment
         android:id="@+id/navigation_dokter"
-        android:name="com.zainul.buildrrr.mainhome.ui.dokter.DokterFragment"
+        android:name="com.zainul.buildrrr.mainclient.ui.dokter.DokterFragment"
         android:label="@string/title_Dokter"
         tools:layout="@layout/fragment_dokter" />
 
     <fragment
         android:id="@+id/navigation_personal"
-        android:name="com.zainul.buildrrr.mainhome.ui.personal.PersonalFragment"
+        android:name="com.zainul.buildrrr.mainclient.ui.personal.PersonalFragment"
         android:label="@string/title_Personal"
         tools:layout="@layout/fragment_personal" />
 </navigation>

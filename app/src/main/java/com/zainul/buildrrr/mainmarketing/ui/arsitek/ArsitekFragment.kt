@@ -1,5 +1,6 @@
 package com.zainul.buildrrr.mainmarketing.ui.arsitek
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -13,6 +14,7 @@ import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
+import com.zainul.buildrrr.mainmarketing.ui.home.ShowTagihan
 import kotlinx.android.synthetic.main.fragment_arsitek_marketing.*
 
 class ArsitekFragment : Fragment() {
@@ -44,11 +46,14 @@ class ArsitekFragment : Fragment() {
         firebaseStorage = FirebaseStorage.getInstance()
         database = Firebase.database.reference
 
+        binding.profilemarketing.setOnClickListener {
+            val home = Intent(activity, Progres::class.java)
+            startActivity(home)
+        }
 
-
-        database.child("Data Marketing").child("XTM0dvSxOnWC2iEyTXRxkIY3nsk2").get().addOnSuccessListener {
+        database.child("Client").child("dsS4LICJtUYjaefi3HVuyaTxjem2").get().addOnSuccessListener {
             if (it.exists()) {
-                val name1 = it.child("datanama").value
+                val name1 = it.child("email").value
 
                 binding.namamar.text = name1.toString()
             }
@@ -66,18 +71,5 @@ class ArsitekFragment : Fragment() {
         }.addOnFailureListener {
             Log.e("firebase", "Gagal Memuat Data")
         }
-        getMarketingProfile()
-
-    }
-
-    private fun getMarketingProfile() {
-        val databaseReference1 =
-            FirebaseDatabase.getInstance().getReference("Data Marketing")
-        databaseReference1.child("XTM0dvSxOnWC2iEyTXRxkIY3nsk2").get()
-            .addOnSuccessListener {
-                val profile1 = it.child("profile").value.toString()
-
-                Glide.with(this).load(profile1).into(profilemarketing)
-            }
     }
 }
